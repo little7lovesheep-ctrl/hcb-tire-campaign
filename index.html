@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="货车宝司机夏季换胎无忧预约">
+  <title>货车宝司机夏季换胎无忧</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="simple-header">
+      <div class="brand">
+        <span class="brand-mark">货</span>
+        <strong>货车宝</strong>
+      </div>
+      <span class="stock-tag">门店有现货</span>
+    </header>
+
+    <section class="hero">
+      <p>货车宝会员用户专享活动</p>
+      <h1>夏季换胎无忧活动</h1>
+      <div class="price-card">
+        <span>多城司机团购折扣后统一价</span>
+        <strong>999元/条</strong>
+      </div>
+      <div class="group-buying-card" aria-label="多城司机正在团购">
+        <div class="driver-avatars" aria-hidden="true">
+          <span>西</span>
+          <span>义</span>
+          <span>杭</span>
+          <span>长</span>
+          <span>潍</span>
+        </div>
+        <div class="group-buying-copy">
+          <strong>多城司机正在团</strong>
+          <em>西安、义乌、杭州钱塘、长春宽城、山东潍坊同步参与</em>
+        </div>
+      </div>
+      <div class="coupon-ticket" aria-label="货车宝平台50元抵扣券">
+        <span>货车宝平台支持</span>
+        <strong>50元抵扣券</strong>
+        <em>线上支付自动抵扣</em>
+      </div>
+      <p class="recycle-note">需旧胎回收，线上支付锁定活动价</p>
+    </section>
+
+    <form class="booking-form" id="bookingForm" novalidate>
+      <section class="form-section">
+        <div class="section-title">
+          <span>1</span>
+          <h2>确认轮胎和数量</h2>
+        </div>
+        <div class="single-product-card">
+          <img src="./assets/linglong-al601.png" alt="玲珑轮胎 四线花纹 12R22.5 轮胎产品图">
+          <div class="product-copy">
+            <strong>玲珑轮胎 四线花纹</strong>
+            <span>12R22.5｜卡车全轮位｜长途运输</span>
+            <em>¥999/条</em>
+            <small>折扣后价格，需旧胎回收</small>
+            <div class="product-advantage-list" aria-label="产品优势">
+              <b>四线曲折花纹，不夹石、防沟裂</b>
+              <b>高速公路标载型，适合长途运输</b>
+              <b>低滚阻胎面，更省油、更安全</b>
+            </div>
+          </div>
+        </div>
+        <div class="quantity-row">
+          <strong>购买数量</strong>
+          <div class="stepper" aria-label="购买数量">
+            <button type="button" id="decrease" aria-label="减少数量">−</button>
+            <output id="quantity">2</output>
+            <button type="button" id="increase" aria-label="增加数量">＋</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="section-title">
+          <span>2</span>
+          <h2>填写联系电话</h2>
+        </div>
+        <label class="phone-field">
+          <span class="sr-only">联系电话</span>
+          <input id="driverPhone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" placeholder="请输入11位手机号">
+        </label>
+      </section>
+
+      <section class="form-section">
+        <div class="section-title">
+          <span>3</span>
+          <h2>预计什么时候到店？</h2>
+        </div>
+        <div class="option-grid time-options" role="radiogroup" aria-label="预计到店时间">
+          <button class="option-button active" type="button" data-arrival="近3天" aria-pressed="true">近3天</button>
+          <button class="option-button" type="button" data-arrival="近7天" aria-pressed="false">近7天</button>
+          <button class="option-button" type="button" data-arrival="1个月内" aria-pressed="false">1个月内</button>
+          <button class="option-button" type="button" data-arrival="1个月及以上" aria-pressed="false">1个月及以上</button>
+        </div>
+      </section>
+
+      <section class="form-section store-section">
+        <div class="section-title">
+          <span>4</span>
+          <h2>选择安装门店</h2>
+        </div>
+        <div class="store-benefit-strip" aria-label="门店服务优势">
+          <span>专业换胎</span>
+          <span>供应稳定</span>
+          <span>300+司机推荐</span>
+        </div>
+        <label class="store-select-wrap">
+          <span class="sr-only">预约门店</span>
+          <select id="storeSelect" aria-label="预约门店">
+            <option value="西安">西安高陵货车轮胎服务点</option>
+            <option value="义乌">义乌货车轮胎服务点</option>
+            <option value="杭州钱塘">杭州钱塘货车轮胎服务点</option>
+            <option value="长春宽城">长春宽城货车轮胎服务点</option>
+            <option value="山东潍坊">山东潍坊货车轮胎服务点</option>
+            <option value="其他城市">其他城市正在陆续开放，敬请期待！</option>
+          </select>
+        </label>
+        <p class="selected-address" id="storeAddress">西安市高陵区·德邦物流（西安高陵区泾河工业园经营分部）</p>
+      </section>
+
+      <section class="payment-summary">
+        <div><span id="summaryProduct">玲珑轮胎 四线花纹 12R22.5 × 2条</span><strong id="goodsTotal">¥1,998</strong></div>
+        <div><span>安装费用</span><strong class="included">已包含</strong></div>
+        <div><span>货车宝平台券</span><strong class="discount">−¥50</strong></div>
+        <div><span>旧胎回收</span><strong class="included">需回收</strong></div>
+        <div class="pay-total"><span>实际支付</span><strong id="finalTotal">¥1,948</strong></div>
+      </section>
+
+      <div class="submit-area">
+        <button class="submit-button" id="submitButton" type="submit">确认并在线支付</button>
+        <p>支付后锁定轮胎和安装名额，门店将电话确认具体到店时间</p>
+      </div>
+    </form>
+
+    <footer class="privacy-note">手机号仅用于本次换胎预约联系</footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="modal-backdrop" id="paymentModal" aria-hidden="true">
+    <section class="success-modal" role="dialog" aria-modal="true" aria-labelledby="paymentTitle">
+      <h2 id="paymentTitle">确认支付信息</h2>
+      <div class="booking-result" id="bookingResult"></div>
+      <div class="modal-total"><span>实际支付</span><strong id="modalTotal">¥1,948</strong></div>
+      <button type="button" id="confirmPay">确认支付</button>
+      <button class="secondary-button" type="button" id="closeModal">返回修改</button>
+      <p class="demo-note">演示版本不会发起真实扣款</p>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
