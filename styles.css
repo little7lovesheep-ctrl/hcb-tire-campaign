@@ -9,8 +9,9 @@
   --brand-blue-pale: #f6f8ff;
   --yellow: var(--brand-blue);
   --yellow-soft: var(--brand-blue-soft);
-  --red: var(--brand-blue);
-  --red-soft: var(--brand-blue-soft);
+  --red: #cf2f24;
+  --red-deep: #a91f18;
+  --red-soft: #fff0ec;
   --green: var(--brand-blue);
   --blue: var(--brand-blue);
   --card-shadow: 0 10px 28px rgba(23, 23, 23, .08);
@@ -124,7 +125,7 @@ button {
 }
 
 .price-card strong {
-  color: var(--brand-blue);
+  color: var(--red);
   font-size: 42px;
   line-height: 1.15;
 }
@@ -217,9 +218,9 @@ button {
   padding: 15px 16px;
   text-align: left;
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
   color: #fff;
-  box-shadow: 0 12px 28px rgba(51, 102, 255, .24);
+  box-shadow: 0 12px 28px rgba(207, 47, 36, .22);
 }
 
 .coupon-ticket::before,
@@ -564,7 +565,7 @@ button {
 }
 
 .discount {
-  color: var(--brand-blue);
+  color: var(--red);
 }
 
 .payment-summary .pay-total {
@@ -576,7 +577,7 @@ button {
 }
 
 .pay-total strong {
-  color: var(--brand-blue);
+  color: var(--red);
   font-size: 38px;
 }
 
@@ -718,7 +719,7 @@ button {
 }
 
 .modal-total strong {
-  color: var(--brand-blue);
+  color: var(--red);
   font-size: 38px;
 }
 
