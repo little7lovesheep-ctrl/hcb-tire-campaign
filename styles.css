@@ -3,12 +3,16 @@
   --muted: #666;
   --line: #d8d8d8;
   --soft: #f7f7f4;
-  --yellow: #ffd400;
-  --yellow-soft: #fff5b8;
-  --red: #cf2f24;
-  --red-soft: #fff0ec;
-  --green: #18723b;
-  --blue: #0b57a4;
+  --brand-blue: #3366ff;
+  --brand-blue-deep: #174be8;
+  --brand-blue-soft: #eef3ff;
+  --brand-blue-pale: #f6f8ff;
+  --yellow: var(--brand-blue);
+  --yellow-soft: var(--brand-blue-soft);
+  --red: var(--brand-blue);
+  --red-soft: var(--brand-blue-soft);
+  --green: var(--brand-blue);
+  --blue: var(--brand-blue);
   --card-shadow: 0 10px 28px rgba(23, 23, 23, .08);
 }
 
@@ -60,15 +64,12 @@ button {
   align-items: center;
 }
 
-.brand-mark {
-  display: grid;
+.brand-logo {
   width: 42px;
   height: 42px;
-  place-items: center;
-  border-radius: 8px;
-  background: var(--yellow);
-  font-size: 22px;
-  font-weight: 900;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 14px rgba(51, 102, 255, .18);
 }
 
 .brand strong {
@@ -77,9 +78,9 @@ button {
 
 .stock-tag {
   padding: 8px 12px;
-  color: var(--green);
+  color: var(--brand-blue);
   border-radius: 8px;
-  background: #eaf7ef;
+  background: var(--brand-blue-soft);
   font-size: 16px;
   font-weight: 800;
 }
@@ -87,7 +88,7 @@ button {
 .hero {
   padding: 28px 18px 24px;
   text-align: center;
-  background: linear-gradient(180deg, #ffffff 0%, #fff9dc 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #eef3ff 100%);
 }
 
 .hero > p {
@@ -123,7 +124,7 @@ button {
 }
 
 .price-card strong {
-  color: var(--red);
+  color: var(--brand-blue);
   font-size: 42px;
   line-height: 1.15;
 }
@@ -216,9 +217,9 @@ button {
   padding: 15px 16px;
   text-align: left;
   border-radius: 16px;
-  background: linear-gradient(135deg, #e73425 0%, #ff7b2e 100%);
+  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
   color: #fff;
-  box-shadow: 0 12px 28px rgba(207, 47, 36, .22);
+  box-shadow: 0 12px 28px rgba(51, 102, 255, .24);
 }
 
 .coupon-ticket::before,
@@ -229,7 +230,7 @@ button {
   height: 18px;
   content: "";
   border-radius: 50%;
-  background: #fff8d8;
+  background: #eef3ff;
   transform: translateY(-50%);
 }
 
@@ -295,6 +296,7 @@ button {
   place-items: center;
   border-radius: 14px;
   background: var(--yellow);
+  color: #fff;
   font-size: 24px;
   font-weight: 900;
 }
@@ -467,9 +469,9 @@ button {
 }
 
 .option-button.active {
-  border: 2px solid var(--red);
+  border: 2px solid var(--brand-blue);
   background: var(--yellow-soft);
-  color: var(--red);
+  color: var(--brand-blue);
 }
 
 .store-benefit-strip {
@@ -562,7 +564,7 @@ button {
 }
 
 .discount {
-  color: var(--red);
+  color: var(--brand-blue);
 }
 
 .payment-summary .pay-total {
@@ -574,7 +576,7 @@ button {
 }
 
 .pay-total strong {
-  color: var(--red);
+  color: var(--brand-blue);
   font-size: 38px;
 }
 
@@ -588,10 +590,11 @@ button {
   min-height: 70px;
   border: 0;
   border-radius: 16px;
-  background: linear-gradient(135deg, #ffd400 0%, #ffb000 100%);
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-deep) 100%);
   font-size: 27px;
   font-weight: 900;
-  box-shadow: 0 10px 22px rgba(255, 176, 0, .28);
+  box-shadow: 0 10px 22px rgba(51, 102, 255, .25);
 }
 
 .submit-area p {
@@ -694,7 +697,8 @@ button {
   min-height: 62px;
   border: 0;
   border-radius: 14px;
-  background: var(--yellow);
+  color: #fff;
+  background: var(--brand-blue);
   font-size: 23px;
   font-weight: 900;
 }
@@ -714,7 +718,7 @@ button {
 }
 
 .modal-total strong {
-  color: var(--red);
+  color: var(--brand-blue);
   font-size: 38px;
 }
 
