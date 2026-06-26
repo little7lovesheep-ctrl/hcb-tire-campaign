@@ -62,7 +62,7 @@ document.querySelector("#decrease").addEventListener("click", () => {
 });
 
 document.querySelector("#increase").addEventListener("click", () => {
-  state.quantity = Math.min(12, state.quantity + 1);
+  state.quantity = Math.min(10, state.quantity + 1);
   updateTotal();
 });
 
